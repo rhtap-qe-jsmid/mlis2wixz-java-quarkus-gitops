@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: mlis2wixz-java-quarkus
+  janus-idp.io/tekton: mlis2wixz-java-quarkus
+  backstage.io/kubernetes-id: mlis2wixz-java-quarkus
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: mlis2wixz-java-quarkus
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
